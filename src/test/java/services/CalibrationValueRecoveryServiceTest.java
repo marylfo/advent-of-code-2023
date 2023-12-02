@@ -15,17 +15,6 @@ class CalibrationValueRecoveryServiceTest {
 
     @ParameterizedTest()
     @CsvSource(quoteCharacter = '*', textBlock = """
-            *1abc2
-            pqr3stu8vwx
-            a1b2c3d4e5f
-            treb7uchet*, *1-CalibrationDocument-test*
-            """)
-    void shouldReadStringFromDocument(String expected, String fileName) {
-        assertEquals(expected, CalibrationValueRecoveryService.readStringFromDocument(fileName));
-    }
-
-    @ParameterizedTest()
-    @CsvSource(quoteCharacter = '*', textBlock = """
             *1-CalibrationDocument-test*, 142
             """)
     void shouldProduceCalibrationValueFromDocument(String input, int result) {

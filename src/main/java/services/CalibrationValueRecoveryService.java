@@ -1,9 +1,5 @@
 package services;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Pattern;
@@ -12,20 +8,19 @@ public class CalibrationValueRecoveryService {
 
     public static final int DIGIT_LETTER_MIN_LENGTH = 3;
     public static final String[] DIGIT_WORDS = new String[]{"one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
-    public static final String FILE_PATH = "src/main/resources/%s.txt";
     public static final String NON_DIGIT_REGEX = "\\D";
     public static final String IS_DIGIT_REGEX = "\\d";
     public static final String SPLIT_BY_DIGIT_AND_KEEP_DIGIT_REGEX = "((?=\\d)|(?<=\\d))";
 
     public static Integer produceValueFromDocument(String fileName) {
-        return CalibrationValueRecoveryService
+        return FileService
                 .readStringFromDocument(fileName)
                 .lines()
                 .map(CalibrationValueRecoveryService::getCalibrationValueFromOneLine)
                 .reduce(0, Integer::sum);
     }
     public static Integer produceValueFromDocumentWithLetterSpelled(String fileName) {
-        return CalibrationValueRecoveryService
+        return FileService
                 .readStringFromDocument(fileName)
                 .lines()
                 .map(CalibrationValueRecoveryService::getCalibrationValueFromOneLineWithLetterSpelled)
@@ -87,25 +82,5 @@ public class CalibrationValueRecoveryService {
             }
         }
         return convertedString.toString();
-    }
-
-    static String readStringFromDocument(String fileName) {
-        try {
-            File file = new File(FILE_PATH.formatted(fileName));
-            FileReader fr = new FileReader(file);
-            BufferedReader br = new BufferedReader(fr);
-            StringBuilder sb = new StringBuilder();
-            String line;
-
-            while ((line=br.readLine()) != null){
-                sb.append(line);
-                sb.append('\n');
-            }
-            fr.close();
-
-            return sb.toString().trim();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
     }
 }
