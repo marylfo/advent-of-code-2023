@@ -1,12 +1,9 @@
-import challenges.Day1;
-import challenges.Day2;
-import challenges.Day3;
-import challenges.Day4;
+import challenges.*;
 
 public class Main {
     public static void main(String[] args) {
-        Day4.solvingScratchcardsPoints();
-        Day4.solvingTotalNumberOfScratchcards();
+        Day5.solvingLowestLocationNumber();
+        Day5.solvingLowestLocationNumberWithRangeSeed();
     }
 
     private static void archive() {
@@ -18,5 +15,8 @@ public class Main {
 
         Day3.solvingSumOfPartNumbers();
         Day3.solvingSumOfGearRations();
+
+        Day4.solvingScratchcardsPoints();
+        Day4.solvingTotalNumberOfScratchcards();
     }
 }
