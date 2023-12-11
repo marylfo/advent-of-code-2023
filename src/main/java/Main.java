@@ -2,8 +2,8 @@ import challenges.*;
 
 public class Main {
     public static void main(String[] args) {
-        Day9.solvingSumOfExtrapolatedValuesAtEnd();
-        Day9.solvingSumOfExtrapolatedValuesAtStart();
+        Day10.solvingStepsToFarthestPoint();
+        Day10.solvingNumberOfEnclosedTiles();
     }
 
     private static void archive() {
@@ -30,5 +30,8 @@ public class Main {
 
         Day8.solvingNumOfSteps();
         Day8.solvingNumOfSimultaneouslySteps();
+
+        Day9.solvingSumOfExtrapolatedValuesAtEnd();
+        Day9.solvingSumOfExtrapolatedValuesAtStart();
     }
 }
