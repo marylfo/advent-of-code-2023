@@ -2,8 +2,8 @@ import challenges.*;
 
 public class Main {
     public static void main(String[] args) {
-        Day16.getNumberOfEnergizedTiles();
-        Day16.getLargestNumberOfEnergizedTiles();
+        Day18.getCubicMeters();
+        Day18.getCubicMetersUsingColor();
     }
 
     private static void archive() {
@@ -48,5 +48,8 @@ public class Main {
 
         Day15.solvingSum();
         Day15.solvingFocusPower();
+
+        Day16.getNumberOfEnergizedTiles();
+        Day16.getLargestNumberOfEnergizedTiles();
     }
 }
