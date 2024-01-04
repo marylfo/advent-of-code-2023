@@ -2,8 +2,8 @@ import challenges.*;
 
 public class Main {
     public static void main(String[] args) {
-        Day18.getCubicMeters();
-        Day18.getCubicMetersUsingColor();
+        Day20.getPulseProduct();
+        Day20.getButtonCountToSendLowToRx();
     }
 
     private static void archive() {
@@ -51,5 +51,8 @@ public class Main {
 
         Day16.getNumberOfEnergizedTiles();
         Day16.getLargestNumberOfEnergizedTiles();
+
+        Day18.getCubicMeters();
+        Day18.getCubicMetersUsingColor();
     }
 }
