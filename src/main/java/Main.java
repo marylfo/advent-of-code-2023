@@ -2,8 +2,8 @@ import challenges.*;
 
 public class Main {
     public static void main(String[] args) {
-        Day19.getSumOfRatingNumbers();
-        Day19.getDistinctCombo();
+//        Day12.solvingSumOfLengths();
+        Day12.solvingSumOfLengthsUnfold();
     }
 
     private static void archive() {
@@ -54,6 +54,9 @@ public class Main {
 
         Day18.getCubicMeters();
         Day18.getCubicMetersUsingColor();
+
+        Day19.getSumOfRatingNumbers();
+        Day19.getDistinctCombo();
 
         Day20.getPulseProduct();
         Day20.getButtonCountToSendLowToRx();
